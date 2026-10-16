@@ -1,0 +1,176 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #f4f6fb;
+  color: #182238;
+}
+
+.page {
+  max-width: 900px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 0;
+  border-bottom: 1px solid #dce2ed;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #243e8f;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h1, h2, p {
+  margin-top: 0;
+}
+
+.header h1 {
+  margin-bottom: 4px;
+  font-size: 23px;
+}
+
+.header p, footer, .note {
+  color: #657089;
+  font-size: 14px;
+}
+
+.header p {
+  margin-bottom: 0;
+}
+
+.chat {
+  flex: 1;
+  min-height: 400px;
+  padding: 28px 0;
+}
+
+.welcome {
+  padding: 45px 20px;
+  text-align: center;
+}
+
+.welcome h2 {
+  font-size: 28px;
+}
+
+.welcome p {
+  line-height: 1.6;
+}
+
+.message {
+  margin: 14px 0;
+  padding: 18px;
+  border-radius: 16px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.message p {
+  white-space: pre-wrap;
+  margin: 8px 0 0;
+}
+
+.message.user {
+  background: #e1e9ff;
+  margin-left: 12%;
+}
+
+.message.assistant {
+  background: white;
+  border: 1px solid #e1e6ef;
+  margin-right: 6%;
+}
+
+.sources {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid #e2e7ef;
+  padding-top: 12px;
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+.sources a {
+  color: #244da7;
+  overflow-wrap: anywhere;
+}
+
+.composer {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  background: white;
+  border: 1px solid #dce2ed;
+  border-radius: 16px;
+}
+
+.composer input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.composer button {
+  border: 0;
+  border-radius: 10px;
+  background: #243e8f;
+  color: white;
+  font-weight: 600;
+  padding: 0 22px;
+  cursor: pointer;
+}
+
+.composer button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.loading {
+  color: #657089;
+}
+
+footer {
+  text-align: center;
+  padding: 18px 0 4px;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 14px;
+  }
+
+  .message.user {
+    margin-left: 5%;
+  }
+
+  .message.assistant {
+    margin-right: 2%;
+  }
+
+  .welcome {
+    padding: 35px 5px;
+  }
+}
